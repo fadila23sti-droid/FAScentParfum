@@ -3,13 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FA Scent Parfum</title>
+
+<title>FA Scent | Luxury Fragrance</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
+:root{
+    --gold:#D4AF37;
+    --black:#0d0d0d;
+    --dark:#171717;
+    --white:#ffffff;
+}
 
 *{
     margin:0;
@@ -23,11 +31,13 @@ html{
 }
 
 body{
-    background:#f8f8f8;
-    color:#333;
+    background:var(--black);
+    color:white;
+    overflow-x:hidden;
 }
 
-/* Navbar */
+/* NAVBAR */
+
 header{
     position:fixed;
     top:0;
@@ -40,242 +50,327 @@ header{
     justify-content:space-between;
     align-items:center;
     padding:20px 8%;
-    background:rgba(0,0,0,0.9);
+    background:rgba(0,0,0,0.85);
     backdrop-filter:blur(10px);
 }
 
 .logo{
-    color:#d4af37;
-    font-size:28px;
-    font-weight:700;
+    color:var(--gold);
+    font-size:30px;
+    font-weight:800;
 }
 
 .menu{
     display:flex;
+    gap:30px;
     list-style:none;
-    gap:25px;
 }
 
 .menu a{
     text-decoration:none;
     color:white;
-    font-weight:500;
-    transition:0.3s;
+    transition:.3s;
 }
 
 .menu a:hover{
-    color:#d4af37;
-}
-
-/* Hero */
-#hero{
-    height:100vh;
-    background:
-    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
-    url("128901578.avif");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    padding:20px;
-}
-
-.hero-content{
-    max-width:700px;
-}
-
-.hero-content h2{
-    font-size:55px;
-    margin-bottom:15px;
-}
-
-.hero-content p{
-    font-size:18px;
-    margin-bottom:30px;
+    color:var(--gold);
 }
 
 .btn{
     display:inline-block;
-    background:#d4af37;
-    color:#111;
-    padding:14px 30px;
+    padding:14px 32px;
+    border-radius:40px;
     text-decoration:none;
-    border-radius:50px;
-    font-weight:600;
-    transition:0.3s;
+    background:var(--gold);
+    color:black;
+    font-weight:700;
+    transition:.3s;
 }
 
 .btn:hover{
     background:white;
-    transform:translateY(-3px);
+    transform:translateY(-4px);
 }
 
-/* Section */
+/* HERO */
+
+#hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:850px;
+    padding:20px;
+}
+
+.hero-content h1{
+    color:var(--gold);
+    font-size:90px;
+    line-height:1;
+}
+
+.hero-content h2{
+    font-size:50px;
+    margin:20px 0;
+}
+
+.hero-content p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+/* SECTION */
+
 section{
-    padding:90px 10%;
+    padding:100px 10%;
 }
 
 .section-title{
+    color:var(--gold);
     text-align:center;
-    font-size:36px;
-    margin-bottom:40px;
-    color:#111;
+    font-size:42px;
+    margin-bottom:50px;
 }
 
 .section-text{
-    max-width:800px;
+    max-width:900px;
     margin:auto;
     text-align:center;
-    line-height:1.8;
+    line-height:1.9;
 }
 
-/* Keunggulan */
+/* FEATURES */
+
 .features{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
 }
 
 .feature-box{
-    background:white;
-    padding:25px;
+    background:var(--dark);
+    border-radius:20px;
+    padding:30px;
     text-align:center;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    transition:.3s;
+    transition:.4s;
 }
 
 .feature-box:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 }
 
-/* Produk */
-.products{
+.feature-box h3{
+    margin-bottom:15px;
+}
+
+/* COLLECTION */
+
+.collections{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
 }
 
+.collection{
+    height:320px;
+    border-radius:20px;
+    display:flex;
+    align-items:end;
+    padding:30px;
+    transition:.4s;
+}
+
+.collection:hover{
+    transform:scale(1.03);
+}
+
+.black{
+    background:linear-gradient(180deg,#202020,#000000);
+}
+
+.gold{
+    background:linear-gradient(180deg,#D4AF37,#7a5900);
+}
+
+.silver{
+    background:linear-gradient(180deg,#9b9b9b,#3c3c3c);
+}
+
+/* PRODUCTS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
 .product-card{
-    background:white;
-    border-radius:15px;
+    background:var(--dark);
+    border-radius:20px;
     overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    transition:.3s;
+    transition:.4s;
 }
 
 .product-card:hover{
     transform:translateY(-10px);
 }
 
-.product-image{
-    height:250px;
-    background:#ddd;
-}
-
-.product-image img{
+.product-card img{
     width:100%;
-    height:100%;
+    height:350px;
     object-fit:cover;
 }
 
 .product-info{
-    padding:20px;
+    padding:25px;
 }
 
 .product-info h3{
     margin-bottom:10px;
-    color:#111;
 }
 
-/* Koleksi */
-.collections{
+/* STATS */
+
+.stats{
     display:flex;
-    flex-wrap:wrap;
     justify-content:center;
-    gap:15px;
+    gap:80px;
+    flex-wrap:wrap;
+    text-align:center;
 }
 
-.collection-item{
-    background:#111;
-    color:white;
-    padding:15px 25px;
-    border-radius:50px;
+.stat h2{
+    color:var(--gold);
+    font-size:60px;
 }
 
-/* Testimoni */
+.stat p{
+    margin-top:10px;
+}
+
+/* TESTIMONIAL */
+
 .testimonials{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:25px;
 }
 
 .testimonial{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    background:var(--dark);
+    padding:30px;
+    border-radius:20px;
 }
 
 .testimonial p{
     margin-bottom:15px;
+    line-height:1.8;
 }
 
 /* CTA */
+
 #cta{
-    background:#111;
+    background:linear-gradient(135deg,#111,#222);
     text-align:center;
-    color:white;
 }
 
 #cta h2{
-    margin-bottom:15px;
-    font-size:40px;
+    font-size:50px;
+    margin-bottom:20px;
 }
 
 #cta p{
-    margin-bottom:25px;
+    margin-bottom:30px;
 }
 
-/* Kontak */
-.contact-box{
+/* CONTACT */
+
+.contact{
     text-align:center;
     line-height:2;
-    font-size:18px;
 }
 
-/* Footer */
+/* FOOTER */
+
 footer{
-    background:#000;
-    color:white;
+    background:black;
     text-align:center;
-    padding:25px;
+    padding:50px 20px;
 }
 
-/* Responsive */
+.footer-logo{
+    color:var(--gold);
+    font-size:30px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    z-index:999;
+}
+
+/* MOBILE */
+
 @media(max-width:768px){
 
-    .navbar{
-        flex-direction:column;
-        gap:15px;
-    }
+.menu{
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
 
-    .menu{
-        gap:15px;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
+.navbar{
+    flex-direction:column;
+    gap:15px;
+}
 
-    .hero-content h2{
-        font-size:35px;
-    }
+.hero-content h1{
+    font-size:55px;
+}
 
-    .section-title{
-        font-size:28px;
-    }
+.hero-content h2{
+    font-size:30px;
+}
+
+.section-title{
+    font-size:32px;
+}
+
+#cta h2{
+    font-size:35px;
+}
+
+.stats{
+    gap:40px;
+}
+
 }
 
 </style>
@@ -284,170 +379,271 @@ footer{
 <body>
 
 <header>
-    <nav class="navbar">
-        <div class="logo">FA Scent</div>
 
-        <ul class="menu">
-            <li><a href="#about">Tentang</a></li>
-            
-            <li><a href="#products">Produk</a></li>
-            <li><a href="#testimonial">Testimoni</a></li>
-            <li><a href="#contact">Kontak</a></li>
-        </ul>
-    </nav>
+<nav class="navbar">
+
+<div class="logo">
+FA SCENT
+</div>
+
+<ul class="menu">
+<li><a href="#about">Tentang</a></li>
+<li><a href="#collection">Koleksi</a></li>
+<li><a href="#products">Produk</a></li>
+<li><a href="#testimonial">Testimoni</a></li>
+<li><a href="#contact">Kontak</a></li>
+</ul>
+
+</nav>
+
 </header>
 
 <section id="hero">
-    <div class="hero-content">
-        <h2>Luxury Scent, Everyday Confidence</h2>
 
-        <p>
-            Temukan aroma premium yang mencerminkan
-            karakter dan meningkatkan rasa percaya diri Anda.
-        </p>
+<div class="hero-content">
 
-        <a href="#products" class="btn">Lihat Produk</a>
-    </div>
+<h1>FA SCENT</h1>
+
+<h2>Luxury Fragrance For Everyday Confidence</h2>
+
+<p>
+Parfum premium yang menghadirkan aroma elegan,
+modern, dan tahan lama untuk meningkatkan
+rasa percaya diri Anda setiap hari.
+</p>
+
+<a href="#products" class="btn">
+Lihat Koleksi
+</a>
+
+</div>
+
 </section>
 
 <section id="about">
-    <h2 class="section-title">Tentang FA Scent Parfum</h2>
 
-    <p class="section-text">
-        FA Scent Parfum menghadirkan koleksi parfum premium dengan
-        karakter aroma yang elegan, modern, dan tahan lama.
-        Kami percaya bahwa aroma yang tepat mampu menciptakan
-        kesan yang tak terlupakan dan meningkatkan kepercayaan diri.
-    </p>
+<h2 class="section-title">
+Tentang FA Scent
+</h2>
+
+<p class="section-text">
+FA Scent menghadirkan koleksi parfum premium dengan karakter aroma
+yang mewah, elegan, dan modern. Kami percaya bahwa aroma yang tepat
+mampu meningkatkan kepercayaan diri serta menciptakan kesan yang
+tak terlupakan.
+</p>
+
 </section>
 
-<section id="advantages">
-    <h2 class="section-title">Mengapa Memilih Kami?</h2>
+<section>
 
-    <div class="features">
-        <div class="feature-box">
-            <h3>⏳ Tahan Lama</h3>
-            <p>Aroma bertahan sepanjang aktivitas.</p>
-        </div>
+<h2 class="section-title">
+Mengapa Memilih Kami
+</h2>
 
-        <div class="feature-box">
-            <h3>🌿 Premium</h3>
-            <p>Bahan berkualitas tinggi.</p>
-        </div>
+<div class="features">
 
-        <div class="feature-box">
-            <h3>🎁 Elegan</h3>
-            <p>Kemasan mewah dan eksklusif.</p>
-        </div>
+<div class="feature-box">
+<h3>⏳ Long Lasting</h3>
+<p>Aroma tahan lama sepanjang aktivitas.</p>
+</div>
 
-        <div class="feature-box">
-            <h3>💰 Terjangkau</h3>
-            <p>Harga bersaing dengan kualitas terbaik.</p>
-        </div>
-    </div>
+<div class="feature-box">
+<h3>🌿 Premium Ingredients</h3>
+<p>Bahan berkualitas tinggi pilihan terbaik.</p>
+</div>
+
+<div class="feature-box">
+<h3>🎁 Luxury Packaging</h3>
+<p>Desain kemasan premium dan elegan.</p>
+</div>
+
+<div class="feature-box">
+<h3>💰 Affordable Luxury</h3>
+<p>Kualitas premium dengan harga terjangkau.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="collection">
+
+<h2 class="section-title">
+Signature Collection
+</h2>
+
+<div class="collections">
+
+<div class="collection black">
+<div>
+<h3>BLACK OUD</h3>
+<p>Woody • Musk • Amber</p>
+</div>
+</div>
+
+<div class="collection gold">
+<div>
+<h3>ROYAL GOLD</h3>
+<p>Leather • Vanilla • Spice</p>
+</div>
+</div>
+
+<div class="collection silver">
+<div>
+<h3>ICE FRESH</h3>
+<p>Citrus • Marine • Mint</p>
+</div>
+</div>
+
+</div>
+
 </section>
 
 <section id="products">
-    <h2 class="section-title">Produk Unggulan</h2>
 
-    <div class="products">
+<h2 class="section-title">
+Best Seller
+</h2>
 
-        <div class="product-card">
-            <div class="product-image">
-                <img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?auto=format&fit=crop&w=600&q=80">
-            </div>
+<div class="products">
 
-            <div class="product-info">
-                <h3>FA Royal</h3>
-                <p>
-                    Aroma woody dan musk yang maskulin,
-                    elegan, dan berkelas.
-                </p>
-            </div>
-        </div>
+<div class="product-card">
 
-        <div class="product-card">
-            <div class="product-image">
-                <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=600&q=80">
-            </div>
+<img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?auto=format&fit=crop&w=800&q=80">
 
-            <div class="product-info">
-                <h3>FA Fresh</h3>
-                <p>
-                    Aroma segar yang cocok digunakan
-                    untuk aktivitas sehari-hari.
-                </p>
-            </div>
-        </div>
+<div class="product-info">
+<h3>FA Royal</h3>
+<p>Aroma woody musk yang elegan dan berkelas.</p>
+</div>
 
-        <div class="product-card">
-            <div class="product-image">
-                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80">
-            </div>
+</div>
 
-            <div class="product-info">
-                <h3>FA Elegant</h3>
-                <p>
-                    Perpaduan floral dan vanilla yang
-                    lembut dan memikat.
-                </p>
-            </div>
-        </div>
+<div class="product-card">
 
-    </div>
+<img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+<h3>FA Fresh</h3>
+<p>Citrus segar dengan karakter aktif dan energik.</p>
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+<h3>FA Elegant</h3>
+<p>Floral vanilla yang lembut dan memikat.</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="collections">
-    <h2 class="section-title">Koleksi Aroma</h2>
+<section>
 
-    <div class="collections">
-        <div class="collection-item">Fresh Collection</div>
-        <div class="collection-item">Woody Collection</div>
-        <div class="collection-item">Floral Collection</div>
-        <div class="collection-item">Oriental Collection</div>
-    </div>
+<h2 class="section-title">
+Brand Performance
+</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2>1000+</h2>
+<p>Pelanggan</p>
+</div>
+
+<div class="stat">
+<h2>20+</h2>
+<p>Varian Aroma</p>
+</div>
+
+<div class="stat">
+<h2>95%</h2>
+<p>Kepuasan Pelanggan</p>
+</div>
+
+</div>
+
 </section>
 
 <section id="testimonial">
-    <h2 class="section-title">Testimoni Pelanggan</h2>
 
-    <div class="testimonials">
+<h2 class="section-title">
+Testimoni Pelanggan
+</h2>
 
-        <div class="testimonial">
-            <p>
-                "Aromanya tahan lama dan sangat nyaman digunakan
-                sepanjang hari."
-            </p>
-            <strong>- Andi</strong>
-        </div>
+<div class="testimonials">
 
-        <div class="testimonial">
-            <p>
-                "Kemasannya premium dan wanginya benar-benar
-                berkualitas."
-            </p>
-            <strong>- Maya</strong>
-        </div>
+<div class="testimonial">
+<p>
+"Parfum terbaik yang pernah saya gunakan.
+Aromanya tahan lama dan sangat premium."
+</p>
+<strong>- Andi</strong>
+</div>
 
-    </div>
+<div class="testimonial">
+<p>
+"Kemasan premium dan wanginya bikin percaya diri."
+</p>
+<strong>- Maya</strong>
+</div>
+
+</div>
+
 </section>
 
 <section id="cta">
-    <h2>Temukan Aroma Favorit Anda</h2>
 
-    <p>
-        Jadilah lebih percaya diri bersama FA Scent Parfum.
-    </p>
+<h2>
+Temukan Aroma Favorit Anda
+</h2>
 
-    <a href="https://wa.me/6289532809900" class="btn" target
-        <p>🎵 TikTok : @fascentparfum</p>
-        <p>📧 Email : info@fascentparfum.com</p>
-    </div>
+<p>
+Saatnya tampil lebih percaya diri bersama FA Scent.
+</p>
+
+<a href="https://wa.me/6289532809900" class="btn" target="_blank">
+Pesan Sekarang
+</a>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">
+Kontak
+</h2>
+
+<div class="contact">
+<p>📱 WhatsApp : 0895-3280-9900</p>
+<p>📷 Instagram : @fascentparfum</p>
+<p>🎵 TikTok : @fascentparfum</p>
+<p>📧 Email : info@fascentparfum.com</p>
+</div>
+
 </section>
 
 <footer>
-    <p>© 2026 FA Scent Parfum. All Rights Reserved.</p>
+
+<div class="footer-logo">
+FA SCENT
+</div>
+
+<p>Luxury Fragrance For Every Moment</p>
+
+<br>
+
+<p>© 2026 FA Scent. All Rights Reserved.</p>
+
 </footer>
 
-</body>
-</html>
+<a href="https://wa.me/6289532809900" class="whatsapp" target="_blank">
+☎
+</a>
