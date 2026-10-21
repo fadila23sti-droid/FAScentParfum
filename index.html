@@ -16,7 +16,7 @@
 :root{
     --gold:#D4AF37;
     --black:#0d0d0d;
-    --dark:#181818;
+    --dark:#171717;
     --white:#ffffff;
 }
 
@@ -33,4 +33,24 @@ html{
 
 body{
     background:var(--black);
-    color
+    color:white;
+    overflow-x:hidden;
+}
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(0,0,0,.88);
+    backdrop-filter:blur(10px);
+}
+
+.logo
