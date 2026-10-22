@@ -29,9 +29,10 @@ html{
 }
 
 body{
-    background:url("bg-parfum.jpg") center center/cover no-repeat fixed;
-    color:black;
-    overflow-x:hidden;
+   body {
+    background: #000;
+    color: #fff;
+}
 }
 
 header{
@@ -101,26 +102,35 @@ header:hover{
 }
 
 #hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+    .hero {
+    min-height: 100vh;
     background:
-    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-    url("128901578.avif");
-    background-size:cover;
-    background-position:center;
+        linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+        ),
+        url('images/banner.jpg');
+
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
 
-.hero-content{
-    max-width:800px;
-    padding:20px;
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+}
+.hero-content h1 {
+    color: #d4af37;
 }
 
-.hero-content h1{
-    font-size:90px;
-    color:var(--gold);
+.hero-content p,
+.hero-content h2 {
+    color: #ffffff;
+}
 }
 
 .hero-content h2{
@@ -201,11 +211,11 @@ section{
 }
 
 .product-card,
-.feature-box,
-.testimonial{
-    background:rgba(255,255,255,.05);
-    backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,.1);
+.feature-box {
+    background: #111;
+    color: white;
+    border: 1px solid #d4af37;
+}
 }
 
 .product-info{
