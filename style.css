@@ -443,6 +443,37 @@ footer {
   section {
     padding: 70px 18px;
   }
+  /* ===== Tampilan cadangan Signature Collection ===== */
+.collection::before {
+  content: "🧴";
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 90px;
+  opacity: 0.35;
+}
+
+.collection img {
+  position: relative;
+  z-index: 1;
+}
+
+.collection-content {
+  z-index: 2;
+}
+
+.collection.black-oud {
+  background: linear-gradient(160deg, #2a1c10, #0b0b0d);
+}
+
+.collection.royal-gold {
+  background: linear-gradient(160deg, #4a3a0c, #0b0b0d);
+}
+
+.collection.ice-fresh {
+  background: linear-gradient(160deg, #0f3340, #0b0b0d);
+}
 
   #hero {
     padding-top: 150px;
